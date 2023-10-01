@@ -75,8 +75,8 @@ class ForeheadRecorder:
                 tmp_hb_signal = img_filter.run_algo(forehead_region)
 
                 if tmp_hb_signal is not None:
-                    heart_rate = fouier_analyzer.run(tmp_hb_signal)
-                    print("heart_rateA: {}".format(heart_rate))
+                    heart_rate = fouier_analyzer.run(tmp_hb_signal) * 60
+                    print("heart_rate : {}".format(heart_rate))
                     hb_test.append(heart_rate)
 
 
